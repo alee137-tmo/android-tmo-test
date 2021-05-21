@@ -9,5 +9,26 @@
         android:id="@+id/alphaFragment"
         android:name="com.example.android.tmo.test.fragment.AlphaFragment"
         android:label="alpha_fragment"
-        tools:layout="@layout/alpha_fragment" />
+        tools:layout="@layout/alpha_fragment" >
+        <action
+            android:id="@+id/action_alphaFragment_to_betaFragment"
+            app:destination="@id/betaFragment" />
+        <action
+            android:id="@+id/action_alphaFragment_to_gammaFragment"
+            app:destination="@id/gammaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/betaFragment"
+        android:name="com.example.android.tmo.test.fragment.BetaFragment"
+        android:label="beta_fragment"
+        tools:layout="@layout/beta_fragment" >
+        <action
+            android:id="@+id/action_betaFragment_to_gammaFragment"
+            app:destination="@id/gammaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gammaFragment"
+        android:name="com.example.android.tmo.test.fragment.GammaFragment"
+        android:label="gamma_fragment"
+        tools:layout="@layout/gamma_fragment" />
 </navigation>

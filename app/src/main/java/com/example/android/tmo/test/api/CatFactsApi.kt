@@ -1,5 +1,8 @@
 package com.example.android.tmo.test.api
 
+import retrofit2.Response
+import retrofit2.http.GET
+
 /**
 
  Example JSON output
@@ -87,5 +90,9 @@ package com.example.android.tmo.test.api
         }
     ]
 */
-class CatFactsApi {
+interface CatFactsApi {
+
+    @GET("facts")
+    fun getFacts() : Response<ArrayList<FactsResponseItem>>
+
 }
